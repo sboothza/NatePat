@@ -4,13 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Datamodule_u;
+  Dialogs, StdCtrls, Datamodule_u, Mask, DBCtrls, DB, ADODB;
 
 type
   TfrmStock = class(TForm)
     btnPurchase: TButton;
     btnSell: TButton;
     btnBack: TButton;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    ADODataSet1: TADODataSet;
     procedure btnPurchaseClick(Sender: TObject);
     procedure btnSellClick(Sender: TObject);
   private
@@ -39,7 +44,7 @@ begin
       if tblInv.Locate('CARD NAME', sNewStockForProduct, []) = true then
         begin
           dmInv.TblInv.Edit;
-          iTodaysDate
+
           iNewStock := StrtoInt(Inputbox('IN STOCK','How much came in?','20'));
           iBrokenStock := StrToint(Inputbox('IN STOCK','How many of the items were broken?','2'));
           tblInv['IN STOCK'] := tblInv['IN STOCK'] + iNewStock;

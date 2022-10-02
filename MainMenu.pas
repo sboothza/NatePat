@@ -31,7 +31,7 @@ implementation
 procedure TForm2.btnShowDatabaseClick(Sender: TObject);
 begin
   Datamodule_u.dmInv.tblInv.Active := True;
-  frmDatabase.Show;
+  frmDatabase.ShowModal;
 
 end;
 

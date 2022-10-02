@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Datamodule_u;
+  Dialogs, StdCtrls, Datamodule_u, Stock;
 
 type
   TfrmEdit = class(TForm)
@@ -15,6 +15,7 @@ type
     procedure btnBackClick(Sender: TObject);
     procedure btnInsertClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
+    procedure btnEditClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,6 +51,11 @@ begin
     end;
 
 
+end;
+
+procedure TfrmEdit.btnEditClick(Sender: TObject);
+begin
+  frmStock.ShowModal;
 end;
 
 procedure TfrmEdit.btnInsertClick(Sender: TObject);

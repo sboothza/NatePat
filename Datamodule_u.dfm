@@ -5,8 +5,8 @@ object dmInv: TdmInv
   object conInvDatabase: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Documents\RAD St' +
-      'udio\Projects\PAT\Inventory.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=H:\src\sboothza\Nat' +
+      'ePat\Inventory.mdb;Persist Security Info=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -14,9 +14,10 @@ object dmInv: TdmInv
     Top = 16
   end
   object tblInv: TADOTable
+    Active = True
     Connection = conInvDatabase
     CursorType = ctStatic
-    TableName = 'Nvidia'
+    TableName = 'stock'
     Left = 80
     Top = 16
   end

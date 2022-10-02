@@ -29,6 +29,7 @@ object frmEdit: TfrmEdit
     Height = 25
     Caption = 'btnEdit'
     TabOrder = 1
+    OnClick = btnEditClick
   end
   object btnDelete: TButton
     Left = 40
